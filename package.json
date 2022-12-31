@@ -8,7 +8,6 @@
     "test": "node scripts/test.js"
   },
   "dependencies": {
-    "@babel/core": "^7.16.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.2",
@@ -21,7 +20,12 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.10",
+    "@svgr/webpack": "^6.5.1",
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@types/babel__core": "^7.1.20",
     "@types/enzyme": "^3.10.12",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.11",
@@ -31,6 +35,7 @@
     "@types/styled-components": "^5.1.26",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
     "babel-jest": "^27.4.2",
+    "babel-loader": "^9.1.0",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
@@ -56,6 +61,7 @@
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.0.1",
     "prompts": "^2.4.2",
+    "react-dev-utils": "^12.0.1",
     "react-dom": "^17.0.2",
     "react-refresh": "^0.11.0",
     "react-test-renderer": "^17.0.2",
