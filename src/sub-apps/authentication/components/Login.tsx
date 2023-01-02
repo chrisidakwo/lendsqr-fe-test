@@ -14,7 +14,8 @@ const LoginPageWrapper = styled.div`
   align-items: center;
   display: grid;
   grid-template-columns: 50% 50%;
-  height: calc(100vh - 120px);
+  background-color: #fff;
+  height: calc(100vh);
 
   @media (max-width: ${BREAKPOINT_SCREEN_SM}px) {
     display: block;
