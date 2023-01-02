@@ -289,6 +289,26 @@ module.exports = function (webpackEnv) {
         // This is only used in production mode
         new CssMinimizerPlugin(),
       ],
+      splitChunks: {
+        name: false,
+        cacheGroups: {
+          default: false,
+          vendors: {
+            test: /[\\/]node_modules\/(react|@mui\/material|styled-components|@loadable|@babel|@emotion|react-dom|react-router)[\\/]/,
+            name: "vendors",
+            chunks: "all",
+            priority: -15,
+            reuseExistingChunk: true
+          },
+          uiKits: {
+            chunks: "all",
+            name: 'ui-kit',
+            test: /[\\/]ui-kit[\\/](button|card|datatable|date-input|dropdown|icon|input|layout|pagination|select|star-rating|theme|typography)/,
+            priority: -10,
+            reuseExistingChunk: true
+          },
+        },
+      },
     },
     resolve: {
       // This allows you to set a fallback for where webpack should look for modules.
@@ -649,15 +669,6 @@ module.exports = function (webpackEnv) {
             entrypoints: entrypointFiles,
           };
         },
-      }),
-      // Moment.js is an extremely popular library that bundles large locale files
-      // by default due to how webpack interprets its code. This is a practical
-      // solution that requires the user to opt into importing specific locales.
-      // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
-      // You can remove this if you don't use Moment.js:
-      new webpack.IgnorePlugin({
-        resourceRegExp: /^\.\/locale$/,
-        contextRegExp: /moment$/,
       }),
       // Generate a service worker script that will precache, and keep up to date,
       // the HTML & assets that are part of the webpack build.
