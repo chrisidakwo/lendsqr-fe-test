@@ -1,7 +1,6 @@
 import React from 'react';
 
-export interface UserDetailProps
-{
+export interface UserDetailProps {
     userId: string;
 }
 

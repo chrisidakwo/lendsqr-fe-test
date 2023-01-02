@@ -4,13 +4,11 @@ import {ThemeProvider as BaseThemeProvider} from 'styled-components';
 import appTheme from './themes/appTheme';
 import {defaultTheme} from "./defaultTheme";
 
-export interface ThemeInterface
-{
+export interface ThemeInterface {
   app: typeof appTheme;
 }
 
-export interface ThemeProps
-{
+export interface ThemeProps {
   theme: ThemeInterface;
 }
 

@@ -3,8 +3,7 @@ import {renderRoutes, RouteConfig} from "react-router-config";
 
 import {PageErrorBoundary} from "../../packages/error-handling";
 
-export interface AppRootProps
-{
+export interface AppRootProps {
     route?: RouteConfig;
 }
 
