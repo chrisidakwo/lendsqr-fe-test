@@ -4,7 +4,7 @@ export const ROUTE_USERS_OVERVIEW = '/users';
 export const ROUTE_USER_PROFILE = '/users/:userId';
 
 const routes = {
-    dashboard: '/',
+    dashboard: ROUTE_DASHBOARD,
     authentication: {
         login: ROUTE_LOGIN
     },

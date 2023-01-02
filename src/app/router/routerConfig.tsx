@@ -2,7 +2,9 @@ import {RouteConfig} from "react-router-config";
 
 import {Routes} from "../../router";
 import {AppRoot} from "../component";
-import DashboardWrapper from "../pages/dashboard";
+import DashboardRoute from "../pages/dashboard";
+import AuthenticationRoutes from "../pages/authetication";
+import UserManagementRoutes from "../pages/user-management";
 
 const routerConfig = (routes: Routes): RouteConfig[] => [
     {
@@ -10,8 +12,17 @@ const routerConfig = (routes: Routes): RouteConfig[] => [
         routes: [
             {
                 path: routes.dashboard,
-                component: DashboardWrapper,
+                component: DashboardRoute,
                 exact: true,
+            },
+            {
+                path: routes.authentication.login,
+                component: AuthenticationRoutes,
+                exact: true,
+            },
+            {
+                path: routes.users.list,
+                component: UserManagementRoutes,
             }
         ],
     }

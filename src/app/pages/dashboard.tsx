@@ -5,7 +5,7 @@ import {Route, Switch} from "react-router-dom";
 import routes from "../../router";
 import Dashboard from '../../sub-apps/dashboard';
 
-const DashboardWrapper = (props: RouteProps): JSX.Element => {
+const DashboardRoute = (props: RouteProps): JSX.Element => {
     return (
         <Switch>
             <Route path={routes.dashboard} component={() => <Dashboard/>}/>
@@ -13,4 +13,5 @@ const DashboardWrapper = (props: RouteProps): JSX.Element => {
     );
 };
 
-export default DashboardWrapper;
+export default DashboardRoute;
+

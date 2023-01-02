@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UIKit/Typography stylesCss renders color 1`] = `
+.c0 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #213F7D;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: hotpink;
+  font-weight: 400;
+}
+
+.c1 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #213F7D;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.c2 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #213F7D;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-weight: 900;
+}
+
+.c3 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #213F7D;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+@media only screen and (max-width:767px) {
+  .c0 {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .c1 {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media only screen and (max-width:767px) {
+  .c2 {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+    color="hotpink"
+  >
+    Lorem ipsum dolor
+  </div>
+  <div
+    className="c1"
+  >
+    Lorem ipsum dolor
+  </div>
+  <div
+    className="c2"
+  >
+    Lorem ipsum dolor
+  </div>
+  <div
+    className="c3"
+  >
+    Lorem ipsum dolor
+  </div>
+</div>
+`;
+
+exports[`UIKit/Typography variantCss renders variant styles 1`] = `
+.c0 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #213F7D;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.c1 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #545F7D;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.c2 {
+  font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  line-height: 1.5rem;
+}
+
+@media only screen and (max-width:767px) {
+  .c0 {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+  }
+}
+
+<div>
+  <div
+    className="c0"
+  >
+    Lorem ipsum dolor
+  </div>
+  <div
+    className="c1"
+  >
+    Lorem ipsum dolor
+  </div>
+  <p
+    className="c2"
+  >
+    Lorem ipsum dolor
+  </p>
+</div>
+`;
