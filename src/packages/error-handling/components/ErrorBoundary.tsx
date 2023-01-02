@@ -1,13 +1,11 @@
 import React, {ErrorInfo, JSXElementConstructor, ReactNode} from 'react';
 
-export interface ErrorBoundaryProps
-{
+export interface ErrorBoundaryProps {
     FallbackComponent?: JSXElementConstructor<{ error?: Error }>;
     children: ReactNode;
 }
 
-interface ErrorBoundaryState
-{
+interface ErrorBoundaryState {
     hasError: boolean;
     error?: Error;
 }

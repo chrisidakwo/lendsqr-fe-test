@@ -1,8 +1,7 @@
 import Box from '@mui/material/Box';
 import React from 'react';
 
-export interface ErrorPageProps
-{
+export interface ErrorPageProps {
     error?: Error;
 }
 
