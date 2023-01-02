@@ -1,8 +1,8 @@
 import React, {FC} from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-import { defaultTheme } from '../../../ui-kit/theme';
+import {BREAKPOINT_SCREEN_MD, BREAKPOINT_SCREEN_SM, defaultTheme} from '../../../ui-kit/theme';
 import Logo from './Logo';
 
 export const NavDesktopContainer = styled.div`
@@ -10,13 +10,13 @@ export const NavDesktopContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 3px 0 20px rgba(0,0,0,0.04);
-  font-family: ${({ theme }): string => theme.app.typography.fontFamily};
+  box-shadow: 3px 0 20px rgba(0, 0, 0, 0.04);
+  font-family: ${({theme}): string => theme.app.typography.fontFamily};
   height: 100px;
   width: 100%;
   padding: 0 30px;
 
-  @media (min-width: 992px) {
+  @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
     display: flex;
   }
 `;
@@ -24,20 +24,6 @@ export const NavDesktopContainer = styled.div`
 NavDesktopContainer.defaultProps = {
     theme: defaultTheme,
 };
-
-const StyledNav = styled.nav`
-  background: #ffffff;
-  box-shadow: 0 2px 4px rgba(10, 17, 26, 0.04), 0 2px 8px rgba(0, 0, 0, 0.08);
-  font-family: ${({ theme }): string => theme.camptoo.typography.fontFamily};
-  height: auto;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: top 0.5s ease 0s;
-  width: 100%;
-  z-index: 1010;
-`;
 
 const InnerContainer = styled.div`
   padding: 1rem;
@@ -65,7 +51,7 @@ const StyledDivContainerSemiFluid = styled.div`
   margin-right: auto;
   margin-left: auto;
 
-  @media (min-width: 768px) {
+  @media (min-width: ${BREAKPOINT_SCREEN_SM}px) {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -76,7 +62,7 @@ const MobileShow = styled.div`
   justify-content: space-between;
   position: relative;
 
-  @media (min-width: 992px) {
+  @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
     display: none;
   }
 `;
@@ -84,7 +70,7 @@ const MobileShow = styled.div`
 const MobileHide = styled.div`
   display: none;
   position: relative;
-  @media (min-width: 992px) {
+  @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
     display: block;
   }
 `;
@@ -101,10 +87,18 @@ export const NavLeftElementsContainer: FC = ({ children }) => (
         <MobileHide>
             <MobileHideContainer>
                 <Link to={'/'}>
-                    <Logo />
+                    <Logo/>
                 </Link>
                 <MobileHideContainer>{children}</MobileHideContainer>
             </MobileHideContainer>
         </MobileHide>
     </NavBarLeft>
+);
+
+export const NavRightElementsContainer: FC = ({children}) => (
+    <NavBarRight>
+        <MobileHide>
+            <MobileHideContainer>{children}</MobileHideContainer>
+        </MobileHide>
+    </NavBarRight>
 );

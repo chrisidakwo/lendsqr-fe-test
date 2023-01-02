@@ -1,15 +1,19 @@
 import React, {Fragment} from 'react';
 
-import {NavDesktopContainer, NavLeftElementsContainer} from "./components/StyledNavBar";
-import LeftElements from "./components/MenuSections/LeftElements";
+import {LeftElements, RightElements} from './components/MenuSections';
+import {NavDesktopContainer, NavLeftElementsContainer, NavRightElementsContainer} from "./components/StyledNavBar";
 
 const NavBar = (): JSX.Element => {
     return (
         <Fragment>
             <NavDesktopContainer>
                 <NavLeftElementsContainer>
-                    <LeftElements />
+                    <LeftElements/>
                 </NavLeftElementsContainer>
+
+                <NavRightElementsContainer>
+                    <RightElements/>
+                </NavRightElementsContainer>
             </NavDesktopContainer>
         </Fragment>
     );
