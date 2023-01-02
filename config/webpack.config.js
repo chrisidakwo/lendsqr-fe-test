@@ -289,26 +289,26 @@ module.exports = function (webpackEnv) {
         // This is only used in production mode
         new CssMinimizerPlugin(),
       ],
-      splitChunks: {
+      splitChunks: isEnvProduction ? {
         name: false,
         cacheGroups: {
           default: false,
           vendors: {
-            test: /[\\/]node_modules\/(react|@mui\/material|@mui\/icons-material|styled-components|@loadable|@babel|@emotion|react-dom|react-router)[\\/]/,
             name: "vendors",
             chunks: "all",
+            test: /[\\/]node_modules[\\/](react|styled-components|react-dom|react-router)/,
             priority: -15,
             reuseExistingChunk: true
           },
           uiKits: {
-            chunks: "all",
             name: 'ui-kit',
-            test: /[\\/]ui-kit[\\/](button|card|datatable|date-input|dropdown|icon|input|layout|pagination|select|star-rating|theme|typography)/,
+            chunks: "all",
+            test: /[\\/]ui-kit[\\/](button|icon|input|layout|theme|typography)/,
             priority: -10,
             reuseExistingChunk: true
           },
         },
-      },
+      } : {},
     },
     resolve: {
       // This allows you to set a fallback for where webpack should look for modules.
