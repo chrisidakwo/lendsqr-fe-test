@@ -294,7 +294,7 @@ module.exports = function (webpackEnv) {
         cacheGroups: {
           default: false,
           vendors: {
-            test: /[\\/]node_modules\/(react|@mui\/material|styled-components|@loadable|@babel|@emotion|react-dom|react-router)[\\/]/,
+            test: /[\\/]node_modules\/(react|@mui\/material|@mui\/icons-material|styled-components|@loadable|@babel|@emotion|react-dom|react-router)[\\/]/,
             name: "vendors",
             chunks: "all",
             priority: -15,

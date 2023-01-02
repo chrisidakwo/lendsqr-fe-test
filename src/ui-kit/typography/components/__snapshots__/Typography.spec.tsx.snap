@@ -19,7 +19,7 @@ exports[`UIKit/Typography stylesCss renders color 1`] = `
   color: #213F7D;
   font-size: 1rem;
   line-height: 1.75rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .c2 {
@@ -29,7 +29,7 @@ exports[`UIKit/Typography stylesCss renders color 1`] = `
   color: #213F7D;
   font-size: 1rem;
   line-height: 1.75rem;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .c3 {
@@ -41,22 +41,25 @@ exports[`UIKit/Typography stylesCss renders color 1`] = `
   line-height: 1.75rem;
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and(max-width:767px) {
   .c0 {
+    color: #545F7D;
     font-size: 0.85rem;
     line-height: 1.5rem;
   }
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and(max-width:767px) {
   .c1 {
+    color: #545F7D;
     font-size: 0.85rem;
     line-height: 1.5rem;
   }
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and(max-width:767px) {
   .c2 {
+    color: #545F7D;
     font-size: 0.85rem;
     line-height: 1.5rem;
   }
@@ -110,12 +113,14 @@ exports[`UIKit/Typography variantCss renders variant styles 1`] = `
   font-family: Work Sans,Segeo UI,Arial,Helvetica Neue,sans-serif;
   margin: 0;
   padding: 0;
+  color: #545F7D;
   font-size: 0.85rem;
   line-height: 1.5rem;
 }
 
-@media only screen and (max-width:767px) {
+@media only screen and(max-width:767px) {
   .c0 {
+    color: #545F7D;
     font-size: 0.85rem;
     line-height: 1.5rem;
   }

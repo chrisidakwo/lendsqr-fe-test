@@ -15,7 +15,7 @@ describe('UIKit/Typography', () => {
             const tree = renderer.toJSON();
 
             expect(renderer.root.findAllByType('h1')).toHaveLength(1);
-            expect(tree).toHaveStyleRule('font-size', '2.25rem');
+            expect(tree).toHaveStyleRule('font-size', '2.5rem');
             expect(tree).toHaveStyleRule('font-weight', '600');
             expect(tree).toHaveStyleRule('line-height', '3rem');
         });
@@ -32,7 +32,7 @@ describe('UIKit/Typography', () => {
 
             expect(renderer.root.findAllByType('h1')).toHaveLength(0);
             expect(renderer.root.findAllByType('p')).toHaveLength(1);
-            expect(tree).toHaveStyleRule('font-size', '2.25rem');
+            expect(tree).toHaveStyleRule('font-size', '2.5rem');
             expect(tree).toHaveStyleRule('font-weight', '600');
             expect(tree).toHaveStyleRule('line-height', '3rem');
             expect(tree).toHaveStyleRule('color', 'hotpink');
