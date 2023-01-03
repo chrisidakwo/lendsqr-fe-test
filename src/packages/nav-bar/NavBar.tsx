@@ -8,7 +8,7 @@ const NavBar = (): JSX.Element => {
         <Fragment>
             <NavDesktopContainer>
                 <NavLeftElementsContainer>
-                    <LeftElements/>
+                    <LeftElements menuClicked={() => console.log('Menu icon was clicked')}/>
                 </NavLeftElementsContainer>
 
                 <NavRightElementsContainer>

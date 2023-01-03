@@ -6,19 +6,20 @@ import {BREAKPOINT_SCREEN_MD, BREAKPOINT_SCREEN_SM, defaultTheme} from '../../..
 import Logo from './Logo';
 
 export const NavDesktopContainer = styled.div`
-  display: none;
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   box-shadow: 3px 0 20px rgba(0, 0, 0, 0.04);
   font-family: ${({theme}): string => theme.app.typography.fontFamily};
+  background-color: #fff;
   height: 100px;
   width: 100%;
   padding: 0 30px;
-
-  @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
-    display: flex;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 `;
 
 NavDesktopContainer.defaultProps = {
@@ -41,7 +42,8 @@ const NavBarRight = styled.div`
 `;
 
 const NavBarLeft = styled.div`
-  float: left;
+  display: flex;
+  align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
 `;
@@ -67,15 +69,17 @@ const MobileShow = styled.div`
   }
 `;
 
-const MobileHide = styled.div`
+export const MobileHide = styled.div`
   display: none;
   position: relative;
+
   @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 `;
 
-const MobileHideContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -84,21 +88,16 @@ const MobileHideContainer = styled.div`
 
 export const NavLeftElementsContainer: FC = ({ children }) => (
     <NavBarLeft>
-        <MobileHide>
-            <MobileHideContainer>
-                <Link to={'/'}>
-                    <Logo/>
-                </Link>
-                <MobileHideContainer>{children}</MobileHideContainer>
-            </MobileHideContainer>
-        </MobileHide>
+        <Link to={'/'}>
+            <Logo/>
+        </Link>
+
+        <Container>{children}</Container>
     </NavBarLeft>
 );
 
 export const NavRightElementsContainer: FC = ({children}) => (
     <NavBarRight>
-        <MobileHide>
-            <MobileHideContainer>{children}</MobileHideContainer>
-        </MobileHide>
+        <Container>{children}</Container>
     </NavBarRight>
 );

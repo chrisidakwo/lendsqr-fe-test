@@ -1,25 +1,49 @@
 import React, {FC, Fragment, PropsWithChildren} from 'react';
 import styled from "styled-components";
 
-import { PageContainer } from './Common/PageContainer';
+import {PageContainer} from './Common/PageContainer';
 import {NavBar} from "../../packages/nav-bar";
+import {BREAKPOINT_SCREEN_SM} from "../theme";
+import {SideBar} from "../../packages/side-bar";
 
-export interface LayoutProps {
+export interface LayoutProps
+{
 
 }
 
 const StyledPageContainer = styled(PageContainer)`
-    height: calc(100vh - 62px);
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding-top: 100px;
+
+  @media (max-width: ${BREAKPOINT_SCREEN_SM}px) {
+    padding-top: 0;
+  }
+`;
+
+const ContentWrapper = styled.div`
+  min-height: calc(100vh - 100px);
+  width: calc(100% - 285px);
+  padding: 40px;
+
+  @media (max-width: ${BREAKPOINT_SCREEN_SM}px) {
+    margin: 0;
+    padding: 15px;
+  }
 `;
 
 const DefaultLayout: FC<PropsWithChildren<LayoutProps>> = ({
-    children
-}): JSX.Element => {
+                                                               children
+                                                           }): JSX.Element => {
     return (
         <Fragment>
-            <NavBar />
+            <NavBar/>
             <StyledPageContainer>
-                {children}
+                <SideBar/>
+                <ContentWrapper>
+                    {children}
+                </ContentWrapper>
             </StyledPageContainer>
         </Fragment>
     );
