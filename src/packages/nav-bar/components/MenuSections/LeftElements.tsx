@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import styled from "styled-components";
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -11,10 +11,6 @@ export interface LeftElementsProps
     menuClicked: () => void;
 }
 
-const Wrapper = styled.div`
-  margin-left: 3.5rem;
-`;
-
 const StyledInput = styled(Input)`
   padding: 6px 18px;
   border-radius: 8px;
@@ -24,7 +20,12 @@ const MenuWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-right: 2rem;
+  margin-left: 3.5rem;
   cursor: pointer;
+
+  @media (max-width: ${BREAKPOINT_SCREEN_MD}px) {
+    margin: 0;
+  }
 
   @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
     display: none;
@@ -33,14 +34,14 @@ const MenuWrapper = styled.div`
 
 const LeftElements = ({menuClicked}: LeftElementsProps): JSX.Element => {
     return (
-        <Wrapper>
+        <Fragment>
             <MenuWrapper onClick={() => menuClicked()}>
                 <MenuIcon/>
             </MenuWrapper>
             <MobileHide>
                 <StyledInput placeholder='Search for anything'/>
             </MobileHide>
-        </Wrapper>
+        </Fragment>
     );
 };
 

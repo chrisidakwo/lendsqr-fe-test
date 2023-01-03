@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-import {BREAKPOINT_SCREEN_MD, BREAKPOINT_SCREEN_SM, defaultTheme} from '../../../ui-kit/theme';
+import {BREAKPOINT_SCREEN_MD, defaultTheme} from '../../../ui-kit/theme';
 import Logo from './Logo';
 
 export const NavDesktopContainer = styled.div`
@@ -20,19 +20,12 @@ export const NavDesktopContainer = styled.div`
   top: 0;
   right: 0;
   left: 0;
+  z-index: 1400;
 `;
 
 NavDesktopContainer.defaultProps = {
     theme: defaultTheme,
 };
-
-const InnerContainer = styled.div`
-  padding: 1rem;
-
-  @media (min-width: 992px) {
-    padding: 0;
-  }
-`;
 
 const NavBarRight = styled.div`
   float: right;
@@ -46,27 +39,6 @@ const NavBarLeft = styled.div`
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-`;
-
-const StyledDivContainerSemiFluid = styled.div`
-  font-weight: 600;
-  margin-right: auto;
-  margin-left: auto;
-
-  @media (min-width: ${BREAKPOINT_SCREEN_SM}px) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-`;
-
-const MobileShow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  @media (min-width: ${BREAKPOINT_SCREEN_MD}px) {
-    display: none;
-  }
 `;
 
 export const MobileHide = styled.div`

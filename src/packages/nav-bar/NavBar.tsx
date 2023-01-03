@@ -3,12 +3,17 @@ import React, {Fragment} from 'react';
 import {LeftElements, RightElements} from './components/MenuSections';
 import {NavDesktopContainer, NavLeftElementsContainer, NavRightElementsContainer} from "./components/StyledNavBar";
 
-const NavBar = (): JSX.Element => {
+export interface NavBarProps
+{
+    onMenuClicked: () => void;
+}
+
+const NavBar = ({onMenuClicked}: NavBarProps): JSX.Element => {
     return (
         <Fragment>
             <NavDesktopContainer>
                 <NavLeftElementsContainer>
-                    <LeftElements menuClicked={() => console.log('Menu icon was clicked')}/>
+                    <LeftElements menuClicked={() => onMenuClicked()}/>
                 </NavLeftElementsContainer>
 
                 <NavRightElementsContainer>

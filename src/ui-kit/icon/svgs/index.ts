@@ -1,5 +1,6 @@
 export * from './BankIcon';
 export * from './BriefcaseIcon';
+export * from './CaretDownIcon';
 export * from './ClipboardIcon';
 export * from './CoinsIcon';
 export * from './CoinsStackIcon';
