@@ -24,6 +24,7 @@ export const menuItems: Record<string, MenuItem[]> = {
     customers: [
         {
             label: 'Users',
+            url: '/users',
             icon: UsersIcon,
         },
         {

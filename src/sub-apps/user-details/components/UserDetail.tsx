@@ -1,14 +1,16 @@
 import React from 'react';
 
+import {DefaultLayout} from "../../../ui-kit/layout";
+
 export interface UserDetailProps {
     userId: string;
 }
 
 const UserDetail = ({userId}: UserDetailProps): JSX.Element => {
     return (
-        <div>
+        <DefaultLayout>
             User with a id of {userId}
-        </div>
+        </DefaultLayout>
     );
 };
 

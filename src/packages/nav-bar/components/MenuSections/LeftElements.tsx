@@ -6,14 +6,14 @@ import {Input} from "../../../../ui-kit/input";
 import {MobileHide} from "../StyledNavBar";
 import {BREAKPOINT_SCREEN_MD} from '../../../../ui-kit/theme';
 
-export interface LeftElementsProps
-{
+export interface LeftElementsProps {
     menuClicked: () => void;
 }
 
 const StyledInput = styled(Input)`
-  padding: 6px 18px;
-  border-radius: 8px;
+  padding: 6px 18px !important;
+  border-radius: 8px !important;
+  margin-left: 4rem;
 `;
 
 const MenuWrapper = styled.div`
@@ -39,7 +39,7 @@ const LeftElements = ({menuClicked}: LeftElementsProps): JSX.Element => {
                 <MenuIcon/>
             </MenuWrapper>
             <MobileHide>
-                <StyledInput placeholder='Search for anything'/>
+                <StyledInput placeholder='Search for anything' border='1px solid rgba(33, 63, 125, 0.2)' />
             </MobileHide>
         </Fragment>
     );

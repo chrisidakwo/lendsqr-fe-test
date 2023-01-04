@@ -14,14 +14,12 @@ import {menuItems} from "./data/menu-items";
 import {Typography} from "../../ui-kit/typography";
 import colors from "../../ui-kit/theme/definitions/colors";
 
-export interface SideBarProps
-{
+export interface SideBarProps {
     open: boolean;
     onClose: () => void;
 }
 
-export interface ContentProps
-{
+export interface ContentProps {
     isLargeScreen: boolean;
     sideBarClose?: () => void;
 }
@@ -54,7 +52,12 @@ const SidebarMenuItems = () => {
         return (
             <MenuSection key={key}>
                 <SectionHeader elementType='span'>{key}</SectionHeader>
-                {items.map((item) => <MenuItem label={item.label} icon={item.icon} key={key + item.label}/>)}
+                {items.map((item) => <MenuItem
+                    label={item.label}
+                    url={item.url}
+                    icon={item.icon}
+                    key={key + item.label}
+                />)}
             </MenuSection>
         );
     });

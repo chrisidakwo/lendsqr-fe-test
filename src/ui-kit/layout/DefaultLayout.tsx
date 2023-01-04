@@ -6,8 +6,7 @@ import {NavBar} from "../../packages/nav-bar";
 import {BREAKPOINT_SCREEN_MD} from "../theme";
 import {SideBar} from "../../packages/side-bar";
 
-export interface LayoutProps
-{
+export interface LayoutProps {
 }
 
 const StyledPageContainer = styled(PageContainer)`
@@ -30,8 +29,8 @@ const ContentWrapper = styled.div`
 `;
 
 const DefaultLayout: FC<PropsWithChildren<LayoutProps>> = ({
-                                                               children
-                                                           }): JSX.Element => {
+   children
+}): JSX.Element => {
     const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
     return (
