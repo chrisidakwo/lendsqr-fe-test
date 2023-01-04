@@ -11,6 +11,7 @@ export interface LeftElementsProps {
 }
 
 const StyledInput = styled(Input)`
+  font-size: 14px;
   padding: 6px 18px !important;
   border-radius: 8px !important;
   margin-left: 4rem;
