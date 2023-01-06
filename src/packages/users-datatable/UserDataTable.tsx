@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {MouseEvent, useState} from 'react';
 import styled from "styled-components";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ClickAwayListener from "@mui/material/ClickAwayListener";
@@ -8,6 +8,7 @@ import {FilterIcon} from "../../ui-kit/icon";
 import {useStatus} from "./hooks/useStatus";
 import {User} from "../../models";
 import HeaderFilter from "./components/HeaderFilter";
+import RowActions from "./components/RowActions";
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -78,13 +79,29 @@ const tableColumns = [
 const UserDataTable = ({ users }: { users: User[] }): JSX.Element => {
     const { getStatusComp } = useStatus();
     const [selectedUser, setSelectedUser] = useState<User | null>(null);
+
+    // Table header filter
     const [filterOpen, setFilterOpen] = useState(false);
     const [headerAnchorEl, setHeaderAnchorEl] = useState<HTMLElement | null>(null);
+
+    // Table data row actions
+    const [actionsAnchorEl, setActionsAnchorEl] = React.useState<null | HTMLElement>(null);
+    const openRowActions = Boolean(actionsAnchorEl);
 
     const showFilterOptions = (el: HTMLElement) => {
         setHeaderAnchorEl(el);
         setFilterOpen(true);
-    }
+    };
+
+    const viewRowActions = (event: any, user: User): void => {
+        setSelectedUser(user);
+        setActionsAnchorEl(event.currentTarget);
+    };
+
+    const closeRowActions = (): void => {
+        setSelectedUser(null);
+        setActionsAnchorEl(null);
+    };
 
     return (
         <div style={{ overflowX: 'auto' }}>
@@ -120,7 +137,7 @@ const UserDataTable = ({ users }: { users: User[] }): JSX.Element => {
                             <td>{getStatusComp()}</td>
                             <td>
                                 <StyledColumn>
-                                    {<MoreVertIcon fontSize='small' sx={{ cursor: 'pointer' }} onClick={() => alert('table action clicked')} />}
+                                    {<MoreVertIcon fontSize='small' sx={{ cursor: 'pointer' }} onClick={(event) => viewRowActions(event, user)} />}
                                 </StyledColumn>
                             </td>
                         </tr>
@@ -136,6 +153,15 @@ const UserDataTable = ({ users }: { users: User[] }): JSX.Element => {
                     )}
                 </tbody>
             </Table>
+
+            {actionsAnchorEl !== null && selectedUser !== null && (
+                <RowActions
+                    anchorEl={actionsAnchorEl}
+                    open={openRowActions}
+                    onClose={closeRowActions}
+                    user={selectedUser}
+                />
+            )}
 
             {headerAnchorEl !== null && (
                 <ClickAwayListener onClickAway={() => {
