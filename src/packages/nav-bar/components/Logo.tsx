@@ -1,11 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Wrapper = styled.div`
-  display: flex;
-  width: 100%;
-`;
-
 const LogoWrapper = styled.div`
   left: 0;
   position: relative;

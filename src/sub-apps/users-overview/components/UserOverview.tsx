@@ -31,7 +31,7 @@ const UserOverview = (): JSX.Element => {
             setUsers(users);
         });
 
-    }, [page, pageLength]);
+    }, [fetchUsers, page, pageLength]);
 
     return (
         <DefaultLayout>
