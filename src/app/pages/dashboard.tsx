@@ -8,7 +8,7 @@ import Dashboard from '../../sub-apps/dashboard';
 const DashboardRoute = (props: RouteProps): JSX.Element => {
     return (
         <Switch>
-            <Route path={routes.dashboard} component={() => <Dashboard/>}/>
+            <Route path={routes.dashboard} render={() => <Dashboard />}/>
         </Switch>
     );
 };

@@ -4,6 +4,7 @@ import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined
 
 import {Typography} from "../../../../ui-kit/typography";
 import UserMenu from './UserMenu';
+import {MobileHide} from "../StyledNavBar";
 
 const NavLink = styled(Typography)`
   text-decoration: underline;
@@ -14,8 +15,10 @@ const NavLink = styled(Typography)`
 const RightElements = (): JSX.Element => {
     return (
         <Fragment>
-            <NavLink elementType='a'>Docs</NavLink>
-            <NotificationsOutlinedIcon sx={{fontSize: '1.75rem', marginRight: '30px'}}/>
+            <MobileHide>
+                <NavLink elementType='a'>Docs</NavLink>
+                <NotificationsOutlinedIcon sx={{fontSize: '1.75rem', marginRight: '30px'}}/>
+            </MobileHide>
             <UserMenu/>
         </Fragment>
     );

@@ -1,1 +1,1 @@
-export {default as UserDetail} from './components/UserDetail';
+export {default as UserDetail} from './LoadableUserDetails';

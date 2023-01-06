@@ -1,7 +1,9 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 
-export const IconSVG = styled.svg<{ cursor?: string }>`
-  ${({ cursor }) =>
+import IconProps from "./IconProps";
+
+export const IconSVG = styled.svg<IconProps>`
+  ${({cursor}) =>
     cursor !== undefined &&
     css`
       cursor: ${cursor};

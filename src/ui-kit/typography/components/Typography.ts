@@ -4,8 +4,7 @@ import {getVariant} from './getVariant';
 import {TypographyStylesProps, TypographyVariant} from '../Typography.types';
 import {color, fontFamily, fontWeightBold, fontWeightMedium, fontWeightRegular, uppercase} from "./Typography.styles";
 
-export interface TypographyProps
-{
+export interface TypographyProps {
     elementType: keyof JSX.IntrinsicElements;
     styleVariant?: string | TypographyVariant;
 }

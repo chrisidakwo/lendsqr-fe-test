@@ -1,17 +1,25 @@
-import Box from '@mui/material/Box';
 import React from 'react';
+import styled from "styled-components";
+
+import {Typography} from "../../../ui-kit/typography";
+import {colors} from "../../../ui-kit/theme";
 
 export interface ErrorPageProps {
     error?: Error;
 }
 
+const Wrapper = styled.div`
+  width: 100%;
+  padding: 6rem 50px 0;
+`;
+
 const ErrorPage = ({error}: ErrorPageProps): JSX.Element => (
-    <Box sx={{width: '100%'}}>
-        <Box sx={{marginTop: '3rem'}}>
-            <h1>Oops! Something went wrong when loading the page.</h1>
-            <p>{error?.message}</p>
-        </Box>
-    </Box>
+    <Wrapper>
+        <Typography elementType='h3' style={{ marginBottom: '1rem' }}>
+            Oops! Something went wrong when loading the page.
+        </Typography>
+        <Typography elementType='p' color={colors.grey.main}>{error?.message}</Typography>
+    </Wrapper>
 );
 
 export default ErrorPage;

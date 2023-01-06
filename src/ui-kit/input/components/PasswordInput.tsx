@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {InputWebProps} from "../Input.types";
 import InputWeb from "./Input.web";
 import {BTN_VARIANT_TRANSPARENT, Button} from "../../button";
+import colors from "../../theme/definitions/colors";
 
 const PasswordInputContainer = styled.div`
   position: relative;
@@ -11,22 +12,24 @@ const PasswordInputContainer = styled.div`
 `;
 
 const StyledButton = styled(Button)`
+  color: ${colors.primary};
   font-family: 'Avenir Next', sans-serif;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.1em;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: -5px;
   min-width: unset;
 `;
 
 export type PasswordInputProps = InputWebProps;
 
 export const PasswordInput = ({
-                                  value,
-                                  fontFamily,
-                                  ...props
-                              }: PasswordInputProps): JSX.Element => {
+  value,
+  fontFamily,
+  ...props
+}: PasswordInputProps): JSX.Element => {
     const [passwordValue, setPasswordValue] = useState(value);
     const [passwordShown, setPasswordShown] = useState(false);
 

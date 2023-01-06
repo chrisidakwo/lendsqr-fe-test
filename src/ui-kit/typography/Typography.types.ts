@@ -1,5 +1,4 @@
-export interface TypographyStylesProps
-{
+export interface TypographyStylesProps {
     color?: string;
     fontFamily?: string;
     fontWeightSemiBold?: boolean;

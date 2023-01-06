@@ -296,14 +296,14 @@ module.exports = function (webpackEnv) {
           vendors: {
             name: "vendors",
             chunks: "all",
-            test: /[\\/]node_modules[\\/](react|styled-components|react-dom|react-router)/,
+            test: /[\\/]node_modules[\\/](react|styled-components|react-dom|react-router|react-use|@mui\/material|@mui\/icons-material)/,
             priority: -15,
             reuseExistingChunk: true
           },
           uiKits: {
             name: 'ui-kit',
             chunks: "all",
-            test: /[\\/]ui-kit[\\/](button|icon|input|layout|theme|typography)/,
+            test: /[\\/]ui-kit[\\/](button|card|icon|input|layout|profile-picture|theme|typography)/,
             priority: -10,
             reuseExistingChunk: true
           },

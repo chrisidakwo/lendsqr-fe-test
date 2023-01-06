@@ -1,15 +1,15 @@
 import {ReactNode} from 'react';
 
 import {ThemeProps} from '../../theme';
+import {WebInputWrapperProps} from "../Input.types";
 
-export interface InputProps
-{
+export interface InputProps {
     error?: boolean;
     icon?: ReactNode;
     iconRight?: ReactNode;
 }
 
-export const getCommon = ({theme}: ThemeProps): string => `
+export const getCommon = ({border, theme}: WebInputWrapperProps & ThemeProps): string => `
   width: 100%;
   line-height: 24px;
   font-size: 16px;
@@ -19,7 +19,7 @@ export const getCommon = ({theme}: ThemeProps): string => `
   background-clip: padding-box;
   padding: 12px;
   border-radius: ${theme.app.borderRadius.small};
-  border: 2px solid rgba(84, 95, 125, 0.15);
+  border: ${border !== undefined ? border : '2px solid rgba(84, 95, 125, 0.15)'};
   box-shadow: none !important;
   -webkit-box-shadow: none !important;
   outline: none !important;

@@ -1,5 +1,6 @@
 export * from './BankIcon';
 export * from './BriefcaseIcon';
+export * from './CaretDownIcon';
 export * from './ClipboardIcon';
 export * from './CoinsIcon';
 export * from './CoinsStackIcon';
@@ -17,6 +18,7 @@ export * from './MoneyHandIcon';
 export * from './NotificationIcon';
 export * from './PercentBadgeIcon';
 export * from './PiggyBankIcon';
+export * from './RatingsIcon';
 export * from './ScrollPaperIcon';
 export * from './SearchIcon';
 export * from './StorageDataIcon';

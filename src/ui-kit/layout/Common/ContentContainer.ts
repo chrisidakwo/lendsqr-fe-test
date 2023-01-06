@@ -2,8 +2,7 @@ import styled, {css} from 'styled-components';
 
 import {COLOR_DARK_BLUE, COLOR_GREY_BACKGROUND} from '../../theme';
 
-interface ContentContainerProps
-{
+interface ContentContainerProps {
   backgroundColor?: string;
   paddingBottom?: boolean;
   borderBottom?: boolean;
