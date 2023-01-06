@@ -4,8 +4,9 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import {useHistory} from "react-router-dom";
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import useLocalStorage from "react-use/esm/useLocalStorage";
 
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {colors} from "../../../ui-kit/theme";
 import {Typography} from "../../../ui-kit/typography";
 import {User} from "../../../models";
 import {UserCheckIcon, UserTimesIcon} from "../../../ui-kit/icon";
@@ -42,9 +43,11 @@ const StyledTypography = styled(Typography)`
 `;
 
 const RowActions = ({ anchorEl, open, onClose, user }: RowActionsProps): JSX.Element => {
+    const [, setUserDetails] = useLocalStorage<User | undefined>(`lendsqr_${user.id}`);
     const { push } = useHistory();
 
     const onViewDetailsClicked = () => {
+        setUserDetails(user);
         push(`/users/${user.id}`);
     };
 

@@ -3,12 +3,13 @@ import styled from "styled-components";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 
-import colors from "../../ui-kit/theme/definitions/colors";
+import {colors} from "../../ui-kit/theme";
 import {FilterIcon} from "../../ui-kit/icon";
 import {useStatus} from "./hooks/useStatus";
 import {User} from "../../models";
 import HeaderFilter from "./components/HeaderFilter";
 import RowActions from "./components/RowActions";
+import {toHumanReadableDate} from "../../utils";
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -133,7 +134,7 @@ const UserDataTable = ({ users }: { users: User[] }): JSX.Element => {
                             <td>{user.userName}</td>
                             <td>{user.email}</td>
                             <td>{user.phoneNumber}</td>
-                            <td>{user.createdAt}</td>
+                            <td>{toHumanReadableDate(user.createdAt)}</td>
                             <td>{getStatusComp()}</td>
                             <td>
                                 <StyledColumn>

@@ -2,7 +2,15 @@ import React, {ButtonHTMLAttributes, ComponentProps, MouseEvent} from 'react';
 import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 
-import {genericCss, getBackgroundColor, getBoxShadow, getHoverColor, getTextColor, getWidth} from "./Button.styles";
+import {
+    genericCss,
+    getBackgroundColor,
+    getBorder,
+    getBoxShadow,
+    getHoverColor,
+    getTextColor,
+    getWidth
+} from "./Button.styles";
 import {BTN_PRIMARY, BTN_VARIANT_FILLED, BTN_VARIANT_TRANSPARENT, ButtonStyleProps} from "../Button.types";
 
 export type ButtonProps = Partial<ButtonStyleProps> & ButtonHTMLAttributes<HTMLButtonElement>;
@@ -20,6 +28,7 @@ const ButtonElement = styled.button`
   ${genericCss}
   ${getWidth}
   ${getBackgroundColor}
+  ${getBorder}
   ${getTextColor}
   ${getBoxShadow}
   &:hover, &:focus {

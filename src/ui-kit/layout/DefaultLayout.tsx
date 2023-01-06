@@ -13,7 +13,9 @@ const StyledPageContainer = styled(PageContainer)`
   display: flex;
   flex-direction: row;
   height: 100vh;
-  padding-top: 100px;`;
+  padding-top: 100px;
+  overflow: auto;
+`
 
 const ContentWrapper = styled.div`
   min-height: calc(100vh - 100px);

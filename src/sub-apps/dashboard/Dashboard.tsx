@@ -2,7 +2,7 @@ import React from 'react';
 
 import {ContentContainer, DefaultLayout, PageHeader} from "../../ui-kit/layout";
 import {Typography} from "../../ui-kit/typography";
-import colors from "../../ui-kit/theme/definitions/colors";
+import {colors} from "../../ui-kit/theme";
 
 const Dashboard = (): JSX.Element => {
     return (

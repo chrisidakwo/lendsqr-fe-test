@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-export interface ProfilePictureProps
-{
+export interface ProfilePictureProps {
     src: string;
     alt?: string;
     containerPadding?: string;
@@ -28,12 +27,12 @@ const ProfileImage = styled.img<{
 `;
 
 const ProfilePicture = ({
-                            src,
-                            alt,
-                            containerPadding,
-                            size,
-                        }: ProfilePictureProps): JSX.Element => (
-    <ProfileImgContainer>
+    src,
+    alt,
+    containerPadding,
+    size,
+}: ProfilePictureProps): JSX.Element => (
+    <ProfileImgContainer containerPadding={containerPadding}>
         <ProfileImage src={src} alt={alt} width={size?.width} height={size?.height} loading={'lazy'}/>
     </ProfileImgContainer>
 );

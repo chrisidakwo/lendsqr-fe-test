@@ -6,9 +6,8 @@ import MenuItem from "@mui/material/MenuItem";
 
 import {MuiPagination} from './MuiPagination';
 import {Typography} from "../../../ui-kit/typography";
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {BREAKPOINT_SCREEN_MD, colors} from "../../../ui-kit/theme";
 import {Button} from "../../../ui-kit/button";
-import {BREAKPOINT_SCREEN_MD} from "../../../ui-kit/theme";
 
 export interface PaginationProps {
     dataLength: number;
@@ -46,6 +45,7 @@ const PageLengthButton = styled(Button)`
   justify-content: space-between;
   box-shadow: none;
   border-radius: 4px;
+  border: unset;
   padding: 7px 12px;
   min-width: 80px;
   height: unset;

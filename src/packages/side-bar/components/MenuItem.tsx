@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {matchPath, useHistory, useLocation, useRouteMatch} from "react-router-dom";
 
 import {Typography} from "../../../ui-kit/typography";
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {colors} from "../../../ui-kit/theme";
 import {MenuItem as IMenuItem} from '../types';
 
 export interface MenuItemProps extends IMenuItem {

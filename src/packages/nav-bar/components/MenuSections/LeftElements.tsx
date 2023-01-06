@@ -5,9 +5,8 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import {Input} from "../../../../ui-kit/input";
 import {MobileHide} from "../StyledNavBar";
-import {BREAKPOINT_SCREEN_MD} from '../../../../ui-kit/theme';
+import {BREAKPOINT_SCREEN_MD, colors} from '../../../../ui-kit/theme';
 import {Button} from "../../../../ui-kit/button";
-import colors from "../../../../ui-kit/theme/definitions/colors";
 
 export interface LeftElementsProps {
     menuClicked: () => void;

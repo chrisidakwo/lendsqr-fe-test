@@ -2,13 +2,12 @@ import React from 'react';
 import styled from "styled-components";
 
 import {PageContainer} from '../../../ui-kit/layout';
-import {BREAKPOINT_SCREEN_LG, BREAKPOINT_SCREEN_MD, BREAKPOINT_SCREEN_SM} from "../../../ui-kit/theme";
+import {BREAKPOINT_SCREEN_LG, BREAKPOINT_SCREEN_MD, BREAKPOINT_SCREEN_SM, colors} from "../../../ui-kit/theme";
 import {Typography} from "../../../ui-kit/typography";
 import illustrationImg from '../img/pablo-sign-in.svg';
 import {BTN_VARIANT_FILLED, BTN_VARIANT_TRANSPARENT, LinkButton, LinkElement} from "../../../ui-kit/button";
 import {Input, PasswordInput} from "../../../ui-kit/input";
 import routes from "../../../router";
-import colors from "../../../ui-kit/theme/definitions/colors";
 
 const LoginPageWrapper = styled.div`
   align-items: center;
@@ -110,6 +109,7 @@ const ForgotPassword = styled(LinkElement)`
   color: ${colors.primary};
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  padding: 0;
 
   &:hover {
     color: ${colors.teal.dark};

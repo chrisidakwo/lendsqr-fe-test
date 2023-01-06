@@ -1,2 +1,2 @@
 export * from './hexToRGB';
-export * from './range';
+export * from './date';

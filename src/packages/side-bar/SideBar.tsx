@@ -5,14 +5,13 @@ import Drawer from "@mui/material/Drawer";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import CloseIcon from '@mui/icons-material/Close';
 
-import {BREAKPOINT_SCREEN_MD} from "../../ui-kit/theme";
+import {BREAKPOINT_SCREEN_MD, colors} from "../../ui-kit/theme";
 import {DashboardIcon} from "../../ui-kit/icon";
 import OrganizationSwitcher from "./components/OrganizationSwitcher";
 import MenuItem from "./components/MenuItem";
 import {MenuItem as IMenuItem} from './types';
 import {menuItems} from "./data/menu-items";
 import {Typography} from "../../ui-kit/typography";
-import colors from "../../ui-kit/theme/definitions/colors";
 
 export interface SideBarProps {
     open: boolean;

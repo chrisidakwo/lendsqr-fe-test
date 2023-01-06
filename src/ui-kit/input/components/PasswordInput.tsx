@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {InputWebProps} from "../Input.types";
 import InputWeb from "./Input.web";
 import {BTN_VARIANT_TRANSPARENT, Button} from "../../button";
+import colors from "../../theme/definitions/colors";
 
 const PasswordInputContainer = styled.div`
   position: relative;
@@ -11,6 +12,7 @@ const PasswordInputContainer = styled.div`
 `;
 
 const StyledButton = styled(Button)`
+  color: ${colors.primary};
   font-family: 'Avenir Next', sans-serif;
   font-size: 12px;
   line-height: 16px;

@@ -9,7 +9,7 @@ export const genericCss = `
   font-size: 14px;
   height: 48px;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px;
   border: none;
   outline: none;
 `;
@@ -32,11 +32,11 @@ export const getBorder = ({color, variant}: ButtonStyleProps): string => {
 
     switch (color) {
         case BTN_PRIMARY:
-            return `border: 1px solid ${colors.primary} !important`;
+            return `border: 1px solid ${colors.primary};`;
         case BTN_SECONDARY:
-            return `border: 1px solid ${colors.secondary} !important`;
+            return `border: 1px solid ${colors.secondary};`;
         case BTN_DANGER:
-            return `border: 1px solid ${colors.red.main} !important`;
+            return `border: 1px solid ${colors.red.main};`;
     }
 }
 

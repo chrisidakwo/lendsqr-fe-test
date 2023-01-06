@@ -18,6 +18,7 @@ export * from './MoneyHandIcon';
 export * from './NotificationIcon';
 export * from './PercentBadgeIcon';
 export * from './PiggyBankIcon';
+export * from './RatingsIcon';
 export * from './ScrollPaperIcon';
 export * from './SearchIcon';
 export * from './StorageDataIcon';

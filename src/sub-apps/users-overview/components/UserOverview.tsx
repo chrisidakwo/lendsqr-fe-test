@@ -5,7 +5,7 @@ import {DefaultLayout, PageHeader, StatisticsSection} from "../../../ui-kit/layo
 import {Typography} from "../../../ui-kit/typography";
 import StatsCard from "../../../ui-kit/card/compositions/StatsCard";
 import {CoinsStackIcon, GenderedUsersIcon, GroupUsersIcon, StorageDataIcon} from "../../../ui-kit/icon";
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {colors} from "../../../ui-kit/theme";
 import {UserDataTable} from "../../../packages/users-datatable";
 import {Card} from '../../../ui-kit/card';
 import {Pagination, usePagination} from "../../../packages/pagination";

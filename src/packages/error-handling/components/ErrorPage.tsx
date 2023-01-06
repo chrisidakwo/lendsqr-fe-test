@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 
 import {Typography} from "../../../ui-kit/typography";
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {colors} from "../../../ui-kit/theme";
 
 export interface ErrorPageProps {
     error?: Error;

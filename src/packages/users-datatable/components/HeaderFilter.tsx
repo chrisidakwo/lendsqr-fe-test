@@ -5,7 +5,7 @@ import Fade from '@mui/material/Fade';
 import Paper from '@mui/material/Paper';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {colors} from "../../../ui-kit/theme";
 import {Input} from "../../../ui-kit/input";
 import {Typography} from "../../../ui-kit/typography";
 import {Button} from "../../../ui-kit/button";

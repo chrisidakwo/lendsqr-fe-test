@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
-import colors from "../../../ui-kit/theme/definitions/colors";
+import {colors} from "../../../ui-kit/theme";
 import {hexToRGB} from "../../../utils";
 
 export interface Status {
