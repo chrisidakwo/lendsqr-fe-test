@@ -59,6 +59,28 @@ const PageLengthMenu = styled(Menu)`
   }
 `;
 
+const StyledMuiPagination = styled(MuiPagination)`
+  .MuiPaginationItem-previousNext {
+    background-color: rgba(33, 63, 125, 0.1);
+  }
+  
+  .MuiPaginationItem-text {
+    color: rgba(33, 63, 125, 0.6);
+    font-weight: 400;
+    
+    &.Mui-selected {
+      color: rgb(33, 63, 125);
+      font-weight: 500;
+    }
+  }
+  
+  .Mui-selected {
+    &.MuiPaginationItem-page {
+      background-color: unset;
+    }
+  }
+`;
+
 const Pagination = ({
     dataLength,
     pagesCount,
@@ -118,7 +140,14 @@ const Pagination = ({
                     out of {dataLength}
                 </Typography>
             </div>
-            <MuiPagination count={pagesCount} page={page} siblingCount={2} boundaryCount={0} onChange={onPageChange} />
+            <StyledMuiPagination
+                count={pagesCount}
+                page={page}
+                siblingCount={2}
+                boundaryCount={0}
+                onChange={onPageChange}
+                shape="rounded"
+            />
         </Wrapper>
     );
 };

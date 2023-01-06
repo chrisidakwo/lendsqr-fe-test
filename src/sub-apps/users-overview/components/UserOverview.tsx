@@ -68,18 +68,16 @@ const UserOverview = (): JSX.Element => {
             <Card>
                 <UserDataTable users={users} />
 
-                {users.length > 0 && (
-                    <Container>
-                        <Pagination
-                            dataLength={users.length}
-                            pagesCount={pagesCount}
-                            pageLength={pageLength}
-                            page={parseInt(page)}
-                            onPageLengthChange={(length) => setPageLength(length)}
-                            onPageChange={(e, page) => setPage(page.toString())}
-                        />
-                    </Container>
-                )}
+                <Container>
+                    <Pagination
+                        dataLength={users.length}
+                        pagesCount={pagesCount}
+                        pageLength={pageLength}
+                        page={parseInt(page)}
+                        onPageLengthChange={(length) => setPageLength(length)}
+                        onPageChange={(e, page) => setPage(page.toString())}
+                    />
+                </Container>
             </Card>
         </DefaultLayout>
     );
