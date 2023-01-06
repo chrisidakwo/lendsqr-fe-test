@@ -7,7 +7,7 @@ import {Login} from "../../sub-apps/authentication";
 const AuthenticationRoutes = (): JSX.Element => {
     return (
         <Switch>
-            <Route path={routes.authentication.login} component={() => <Login/>}/>
+            <Route path={routes.authentication.login} render={() => <Login />}/>
         </Switch>
     );
 };

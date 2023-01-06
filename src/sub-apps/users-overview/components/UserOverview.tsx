@@ -1,13 +1,34 @@
-import React from 'react';
-import {Card} from "@mui/material";
+import React, {useEffect, useState} from 'react';
+import styled from "styled-components";
 
 import {DefaultLayout, PageHeader, StatisticsSection} from "../../../ui-kit/layout";
 import {Typography} from "../../../ui-kit/typography";
 import StatsCard from "../../../ui-kit/card/compositions/StatsCard";
 import {CoinsStackIcon, GenderedUsersIcon, GroupUsersIcon, StorageDataIcon} from "../../../ui-kit/icon";
 import colors from "../../../ui-kit/theme/definitions/colors";
+import {UserDataTable} from "../../../packages/users-datatable";
+import {Card} from '../../../ui-kit/card';
+import {Pagination, usePagination} from "../../../packages/pagination";
+import {User} from "../../../models";
+import {useUserApi} from "../../../api";
+
+const Container = styled.div`
+    margin-top: 2rem;
+`;
 
 const UserOverview = (): JSX.Element => {
+    const [users, setUsers] = useState<User[]>([]);
+    const { page, setPage, pageLength, setPageLength, pagesCount } = usePagination(100, 10);
+
+    const { fetchUsers } = useUserApi();
+
+    useEffect( () => {
+        fetchUsers(page, pageLength).then((users: User[]) => {
+            setUsers(users);
+        });
+
+    }, [page, pageLength]);
+
     return (
         <DefaultLayout>
             <PageHeader>
@@ -45,7 +66,20 @@ const UserOverview = (): JSX.Element => {
             </StatisticsSection>
 
             <Card>
-                Hello
+                <UserDataTable users={users} />
+
+                {users.length > 0 && (
+                    <Container>
+                        <Pagination
+                            dataLength={users.length}
+                            pagesCount={pagesCount}
+                            pageLength={pageLength}
+                            page={parseInt(page)}
+                            onPageLengthChange={(length) => setPageLength(length)}
+                            onPageChange={(e, page) => setPage(page.toString())}
+                        />
+                    </Container>
+                )}
             </Card>
         </DefaultLayout>
     );

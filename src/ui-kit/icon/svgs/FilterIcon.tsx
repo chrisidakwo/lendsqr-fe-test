@@ -7,10 +7,14 @@ import colors from "../../theme/definitions/colors";
 export const FilterIcon: FunctionComponent<IconProps> = ({
     size,
     fillColor,
+    cursor,
+    onClick,
 }): JSX.Element => (
     <IconSVG
         width={size?.width ?? '16'}
         height={size?.height ?? '16'}
+        cursor={cursor}
+        onClick={onClick}
         viewBox="0 0 16 16"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

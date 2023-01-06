@@ -1,1 +1,1 @@
-export {default as UserOverview} from './components/UserOverview';
+export {default as UserOverview} from './components/LoadableUserOverview';

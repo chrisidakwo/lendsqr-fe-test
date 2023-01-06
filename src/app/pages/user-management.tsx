@@ -16,7 +16,7 @@ const UserManagementRoutes = (): JSX.Element => {
                 }}
                 exact
             />
-            <Route path={''} component={() => <UserOverview/>} exact/>
+            <Route path={''} render={(props) => <UserOverview/>} exact/>
         </Switch>
     );
 };
