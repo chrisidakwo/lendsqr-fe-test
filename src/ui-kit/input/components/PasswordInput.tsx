@@ -17,16 +17,17 @@ const StyledButton = styled(Button)`
   letter-spacing: 0.1em;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: -5px;
   min-width: unset;
 `;
 
 export type PasswordInputProps = InputWebProps;
 
 export const PasswordInput = ({
-                                  value,
-                                  fontFamily,
-                                  ...props
-                              }: PasswordInputProps): JSX.Element => {
+  value,
+  fontFamily,
+  ...props
+}: PasswordInputProps): JSX.Element => {
     const [passwordValue, setPasswordValue] = useState(value);
     const [passwordShown, setPasswordShown] = useState(false);
 

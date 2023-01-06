@@ -16,6 +16,10 @@ const Container = styled.div`
     margin-top: 2rem;
 `;
 
+const StyledCard = styled(Card)`
+    margin-bottom: 2rem;
+`;
+
 const UserOverview = (): JSX.Element => {
     const [users, setUsers] = useState<User[]>([]);
     const { page, setPage, pageLength, setPageLength, pagesCount } = usePagination(100, 10);
@@ -65,7 +69,7 @@ const UserOverview = (): JSX.Element => {
                 />
             </StatisticsSection>
 
-            <Card>
+            <StyledCard>
                 <UserDataTable users={users} />
 
                 <Container>
@@ -78,7 +82,7 @@ const UserOverview = (): JSX.Element => {
                         onPageChange={(e, page) => setPage(page.toString())}
                     />
                 </Container>
-            </Card>
+            </StyledCard>
         </DefaultLayout>
     );
 };

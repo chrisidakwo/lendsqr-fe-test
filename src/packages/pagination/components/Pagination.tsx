@@ -8,6 +8,7 @@ import {MuiPagination} from './MuiPagination';
 import {Typography} from "../../../ui-kit/typography";
 import colors from "../../../ui-kit/theme/definitions/colors";
 import {Button} from "../../../ui-kit/button";
+import {BREAKPOINT_SCREEN_MD} from "../../../ui-kit/theme";
 
 export interface PaginationProps {
     dataLength: number;
@@ -22,6 +23,14 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  @media (max-width: ${BREAKPOINT_SCREEN_MD}px) {
+    flex-direction: column;
+    
+    > div {
+      margin-bottom: 2rem;
+    }
+  } 
 `;
 
 const PageLengthWrapper = styled.span`

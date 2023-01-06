@@ -5,7 +5,7 @@ import colors from "../../theme/definitions/colors";
 export const genericCss = `
   border-radius: 8px;
   font-weight: 600;
-  line-height: 19px;
+  line-height: 1.1;
   font-size: 14px;
   height: 48px;
   text-align: center;
@@ -32,11 +32,11 @@ export const getBorder = ({color, variant}: ButtonStyleProps): string => {
 
     switch (color) {
         case BTN_PRIMARY:
-            return `border: 1px solid ${colors.primary}`;
+            return `border: 1px solid ${colors.primary} !important`;
         case BTN_SECONDARY:
-            return `border: 1px solid ${colors.secondary}`;
+            return `border: 1px solid ${colors.secondary} !important`;
         case BTN_DANGER:
-            return `border: 1px solid ${colors.red.main}`;
+            return `border: 1px solid ${colors.red.main} !important`;
     }
 }
 

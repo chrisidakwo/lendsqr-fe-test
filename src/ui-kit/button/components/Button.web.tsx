@@ -28,14 +28,14 @@ const ButtonElement = styled.button`
 `;
 
 const Button = ({
-                    type = 'button',
-                    fullWidth = false,
-                    color = BTN_PRIMARY,
-                    variant = BTN_VARIANT_FILLED,
-                    fontFamily,
-                    children,
-                    ...props
-                }: ButtonProps): JSX.Element => {
+    type = 'button',
+    fullWidth = false,
+    color = BTN_PRIMARY,
+    variant = BTN_VARIANT_FILLED,
+    fontFamily,
+    children,
+    ...props
+}: ButtonProps): JSX.Element => {
     const {onClick, onPress, ...buttonElementProps} = props;
 
     return (

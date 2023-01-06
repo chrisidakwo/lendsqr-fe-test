@@ -4,6 +4,7 @@ import {ChangeEvent, forwardRef} from "react";
 import {defaultTheme, ThemeProps} from "../../theme";
 import {InputWebProps, WebInputWrapperProps} from "../Input.types";
 import {getCommon} from "./Input.style";
+import colors from "../../theme/definitions/colors";
 
 export const StyledInput = styled.input<WebInputWrapperProps & ThemeProps>`
   font-family: ${({fontFamily, theme}): string => fontFamily !== undefined
@@ -39,10 +40,12 @@ const InputContainer = styled.div`
 `;
 
 const IconContainerRight = styled.div`
+  color: ${colors.grey.main};
   background-color: white;
   position: absolute;
   right: 2px;
-  top: 2px;
+  top: 7px;
+  padding: 0 10px;
 `;
 
 const InputWeb = forwardRef<HTMLInputElement, InputWebProps>(
