@@ -52,6 +52,11 @@ const SearchButton = styled(Button)`
   border: 1px solid ${colors.primary};
   height: 38px;
   border-radius: 0 8px 8px 0;
+  
+  &:focus, &:hover, &:active {
+    outline: none;
+    border: 1px solid ${colors.primary};
+  }
 `;
 
 const LeftElements = ({menuClicked}: LeftElementsProps): JSX.Element => {
