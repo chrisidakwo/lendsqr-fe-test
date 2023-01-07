@@ -115,7 +115,7 @@ const UserDetail = ({userId}: UserDetailProps): JSX.Element => {
             });
         }
 
-    }, [fetchUser, setUserDetails, userDetails, userId]);
+    }, [userDetails, userId]);
 
     return (
         <DefaultLayout>
